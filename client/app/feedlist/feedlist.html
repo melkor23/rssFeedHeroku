@@ -1,0 +1,27 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<header class="hero-unit" id="banner">
+    <div class="container">
+        <h1>'Allo, 'Allo!</h1>
+        <p class="lead">Kick-start your next web app with Angular Fullstack</p>
+        <img src="assets/images/yeoman.png" alt="I'm Yeoman">
+    </div>
+</header>
+
+<div class="container" ng-controller="FeedCtrl">
+    <div class="col-md-2" ng-repeat="item in feedRss.items">
+        <div class="panel panel-default shadow container">
+            <div class="panel panel-default shadow container">
+                <input id='tituloSeleccion' type=hidden value="{{item.title}}" />
+                <img src="{{item.description}}" />
+                <div class="container" ng-show="isLoggedIn()">
+                    <!--    <button  type="button" class="btn btn-primary container" data-toggle="modal" data-target=".bs-example-modal-sm">Add</button>-->
+                    <!--<button type="button" class="btn btn-primary container" ng-click="addThing(item)">Añadir</button>-->
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div ng-include="'components/footer/footer.html'"></div>
